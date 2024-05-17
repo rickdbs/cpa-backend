@@ -1,0 +1,22 @@
+[
+  {
+    "cpf": "46532185299",
+    "nome": "João da Silva Matos",
+    "tipoSanguineo": "AB+",
+    "sexo": "mars",
+    "alergias": "Dipirona, Amoxilina",
+    "enfermidades": "Diabetes",
+    "medicamentos": "Insulina",
+    "procedimentos": "Marca-passo"
+  },
+  {
+    "cpf": "95728626477",
+    "nome": "Maria de Medeiros",
+    "tipoSanguineo": "B-",
+    "sexo": "venus",
+    "alergias": "lactose, rinite, frutos do mar, dermatite",
+    "enfermidades": "pressão alta, pancreatite, acido-úrico",
+    "medicamentos": "Insulina, propranolol, alopurinol",
+    "procedimentos": "operação na vesícula"
+  }
+]
