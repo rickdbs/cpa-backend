@@ -1,8 +1,9 @@
 import getPatientByCpf from '../services/patient.js'
+import { insertPatient } from '../services/patient.js'
 
-function getPatient (req, res) {
+export function getPatient (req, res) {
   const cpf = req.params.cpf
-  console.log("chegou aqui")
+  
 
   try {
     if (cpf && Number(cpf)) {
@@ -18,5 +19,30 @@ function getPatient (req, res) {
   }
 }
 
+export function addPatient(req, res) {
 
-export default getPatient
+  try {
+    const newPatient = req.body
+
+    if (req.body.cpf) {
+      insertPatient(newPatient)
+      res.status(201)
+      res.send("Cadastro criado com sucesso")
+    
+    } else {
+      req.status(422)
+      req.send("O campo CPF é obrigatório")
+    }
+
+    
+  } catch (error) {
+
+    res.status(500)
+    res.send(error.message)
+  }
+
+}
+
+
+
+
