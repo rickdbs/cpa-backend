@@ -1,11 +1,13 @@
 import { Router } from "express";
-import  { getPatient } from '../controllers/patient.js'
-import { addPatient } from "../controllers/patient.js";
+import { PatientController } from "../controllers/PatientController.js";
 
 const router = Router()
+const patientsController = new PatientController()
 
-router.get('/:cpf', getPatient)
+router.get('/:cpf', patientsController.get)
 
-router.post('/', addPatient)
+router.post('/', patientsController.add)
+
+router.patch('/', patientsController.insertData)
 
 export default router
